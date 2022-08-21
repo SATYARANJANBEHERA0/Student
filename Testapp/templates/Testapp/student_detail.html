@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'Testapp/base.html' %}
+ {% block body_block %}
+ <h1>{{Student.Firstname}} Information</h1>
+
+    <ul>
+      <li>FirstName: {{student.Firstname}}</li>
+      <li>LastName:{{student.Lasttname}}</li>
+      <li>Email:{{student.Email}}</li>
+      <li>Password:{{student.Password}}</li>
+      <li>Occupation:{{student.Occupation}}</li>
+      <li>Gender:{{student.Gender}}</li>
+      <li>DOB:{{student.DOB}}</li>
+      <li>Education.{{student.Education}}</li>
+      <li>State.{{student.State}}</li>
+      <li>Country.{{student.Country}}</li>
+    </ul>
+    <a class="btn btn-success" href="/update/{{student.id}}">Update</a>
+    <a class="btn btn-success" href="/home">Homepage</a>
+
+ {% endblock %}

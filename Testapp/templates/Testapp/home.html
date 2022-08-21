@@ -1,0 +1,12 @@
+
+<!DOCTYPE html>
+{% extends 'Testapp/base.html' %}
+ {% block body_block %}
+  <h1>Student Information</h1>
+   {%for student in student_list %}
+    <ul>
+      <li><a href="/{{student.id}}">{{student.Firstname}}</a></li>
+    </ul>
+   {% endfor %}
+   <a class="btn btn-primary" href="/insert">InsertNewRecord</a>
+ {% endblock %}
